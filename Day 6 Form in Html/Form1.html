@@ -60,6 +60,7 @@
         background-color: lemonchiffon;
         border: 2px solid black;
         border-radius: 12px;
+        resize: none;
       }
     </style>
   </head>
@@ -67,7 +68,7 @@
     <table align="center">
       <tr>
         <td align="center">
-          <form action="#">
+          <form action="#" ">
             <h2 style="color: crimson">Personal Details</h2>
             Name <sup>*</sup>
             <input
@@ -75,6 +76,8 @@
               placeholder="Full Name"
               name="user-name"
               required
+              maxlength="20"
+              
             />
             <br /><br />
             Email <sup>*</sup
@@ -83,6 +86,8 @@
               placeholder="abc@gmail.com"
               name="user-email"
               required
+              autocomplete="off"
+              
             />
             <br /><br />
             Password <sup>*</sup>
@@ -94,7 +99,13 @@
             />
             <br /><br />
             Contact no.
-            <input type="tel" placeholder="+91-9638527410" name="user-mob" />
+            <input
+              type="tel"
+              placeholder="+91-9638527410"
+              name="user-mob"
+              minlength="10"
+              maxlength="14"
+            />
             <br /><br />
             Gender <br />
             <input type="radio" name="gender" checked />Male
@@ -104,7 +115,7 @@
             <h2 style="color: crimson">Educational Details</h2>
             Degree:-
             <select name="degree" id="degree">
-              <option selected>--Select Degree--</option>
+              <option value="" disabled selected>--Select Degree--</option>
               <option value="">B.Tech</option>
               <option value="">B.Sc</option>
               <option value="">B.com</option>
@@ -112,16 +123,16 @@
             ><br /><br />
             Passing Year
             <select name="yop" id="yop">
-              <option selected>--Select YOP--</option>
+              <option  disabled selected>--Select YOP--</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
-              <option value="">2023</option>
-              <option value="">2022</option>
-              <option value="">2021</option>
-              <option value="">2020</option>
-              <option value="">2019</option>
-              <option value="">2018</option>
-              <option value="">2017</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
             </select>
             <br /><br />
             Hobbies: <br />
